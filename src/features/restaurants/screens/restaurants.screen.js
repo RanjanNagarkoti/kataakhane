@@ -29,9 +29,9 @@ export const RestaurantsScreen = () => {
           value={searchQuery}
         />
       </View>
-      <ScrollView style={{ flex: 1, padding: 16 }}>
+      <View style={{ padding: 16 }}>
         <ResaturantInfo />
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };

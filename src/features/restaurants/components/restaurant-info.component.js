@@ -1,5 +1,5 @@
 import React from "react";
-import {StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Avatar, Button, Card, Text } from "react-native-paper";
 
 export const ResaturantInfo = ({ restaurant = {} }) => {
@@ -14,14 +14,30 @@ export const ResaturantInfo = ({ restaurant = {} }) => {
   } = restaurant;
 
   return (
-    <Card elevation={5} style={styles.card}>
-        <Text>{name}</Text>
+    <Card>
+      <Card.Title title={name} subtitle={address} />
+
+      <Card.Cover source={{ uri: photos }} />
+      <Card.Content style={styles.row}>
+        <View>
+          <Text variant="bodyMedium">{rating}</Text>
+          <Text variant="bodyMedium">{openingHours ? "Open" : "Closed"}</Text>
+        </View>
+        <Card.Actions>
+          <Button>Ok</Button>
+        </Card.Actions>
+      </Card.Content>
     </Card>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
-    card:{
-        backgroundColor: "white",
-    }
+  card: {
+    backgroundColor: "white",
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
 });
