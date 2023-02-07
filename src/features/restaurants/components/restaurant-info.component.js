@@ -1,7 +1,22 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { Avatar, Button, Card, Text } from "react-native-paper";
+import { Avatar, Button, Card } from "react-native-paper";
+import styled from "styled-components/native";
 
+const Title = styled.Text`
+  padding: 16px;
+  color: red;
+`;
+
+const RestaurantCard = styled(Card)`
+  backgroundcolor: "white";
+  margin: 18px;
+`;
+
+const RestaurantCardCover = styled(Card.Cover)`
+    padding: 20px;
+    backgroundColor: "white";
+`;
 export const ResaturantInfo = ({ restaurant = {} }) => {
   const {
     name = "Rajesh dai ko chiya pasal",
@@ -14,27 +29,24 @@ export const ResaturantInfo = ({ restaurant = {} }) => {
   } = restaurant;
 
   return (
-    <Card>
+    <RestaurantCard style={styles.card}>
       <Card.Title title={name} subtitle={address} />
 
-      <Card.Cover source={{ uri: photos }} />
+      <RestaurantCardCover source={{ uri: photos }} style={styles.cover} />
       <Card.Content style={styles.row}>
         <View>
-          <Text variant="bodyMedium">{rating}</Text>
-          <Text variant="bodyMedium">{openingHours ? "Open" : "Closed"}</Text>
+          <Title variant="bodyMedium">{rating}</Title>
+          <Title variant="bodyMedium">{openingHours ? "Open" : "Closed"}</Title>
         </View>
         <Card.Actions>
           <Button>Ok</Button>
         </Card.Actions>
       </Card.Content>
-    </Card>
+    </RestaurantCard>
   );
 };
 
 const styles = StyleSheet.create({
-  card: {
-    backgroundColor: "white",
-  },
   row: {
     flexDirection: "row",
     justifyContent: "space-between",
