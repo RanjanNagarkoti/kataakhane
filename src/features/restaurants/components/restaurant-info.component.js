@@ -5,7 +5,7 @@ import styled from "styled-components/native";
 
 const Title = styled.Text`
   padding: 16px;
-  color: red;
+  color: ${(props) => props.theme.colors.text.primary};
 `;
 
 const RestaurantCard = styled(Card)`
@@ -14,8 +14,8 @@ const RestaurantCard = styled(Card)`
 `;
 
 const RestaurantCardCover = styled(Card.Cover)`
-    padding: 20px;
-    backgroundColor: "white";
+  padding: 20px;
+  backgroundcolor: "white";
 `;
 export const ResaturantInfo = ({ restaurant = {} }) => {
   const {
