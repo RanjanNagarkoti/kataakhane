@@ -1,19 +1,6 @@
 import React, { useState } from "react";
-import {
-  Searchbar,
-  List,
-  Avatar,
-  Button,
-  Card,
-  Text,
-} from "react-native-paper";
-import {
-  StyleSheet,
-  SafeAreaView,
-  View,
-  StatusBar,
-  ScrollView,
-} from "react-native";
+import { Searchbar } from "react-native-paper";
+import { SafeAreaView, StatusBar } from "react-native";
 import { ResaturantInfo } from "../components/restaurant-info.component";
 import styled from "styled-components";
 
@@ -23,13 +10,13 @@ const SafeArea = styled(SafeAreaView)`
 `;
 
 const SearchContainer = styled.View`
-  padding: 16px;
+  padding: ${(props) => props.theme.space[4]};
 `;
 
 const RestaurantListContainer = styled.View`
   flex: 1;
-  padding: 16px;
-  background-color: white;
+  padding: ${(props) => props.theme.space[4]};
+  background-color: ${(props) => props.theme.colors.ui.tertiary};
 `;
 
 export const RestaurantsScreen = () => {
