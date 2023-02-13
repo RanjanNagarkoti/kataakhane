@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Searchbar } from "react-native-paper";
 import { SafeAreaView, StatusBar } from "react-native";
-import { ResaturantInfo } from "../components/restaurant-info.component";
 import styled from "styled-components";
+import { ResaturantInfoCard } from "../components/restaurant-info-card.component";
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
@@ -33,7 +33,7 @@ export const RestaurantsScreen = () => {
         />
       </SearchContainer>
       <RestaurantListContainer>
-        <ResaturantInfo />
+        <ResaturantInfoCard />
       </RestaurantListContainer>
     </SafeArea>
   );
