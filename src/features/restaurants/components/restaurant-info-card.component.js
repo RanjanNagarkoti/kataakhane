@@ -1,29 +1,52 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import { Avatar, Button, Card } from "react-native-paper";
+import { Button, Card } from "react-native-paper";
 import styled from "styled-components/native";
-import { useFonts, Roboto_400Regular_Italic } from "@expo-google-fonts/roboto";
+
+import { SvgXml } from "react-native-svg";
+import star from "../../../../assets/star";
+import open from "../../../../assets/open";
 
 const Title = styled.Text`
-  padding: ${(props) => props.theme.space[4]};
+  padding: ${(props) => props.theme.space[2]};
   color: ${(props) => props.theme.colors.text.primary};
-  font-family: Roboto_400Regular_Italic;
+  font-family: Oswald_400Regular;
 `;
 
 const RestaurantCard = styled(Card)`
   backgroundcolor: ${(props) => props.theme.colors.ui.primary};
-  margin: ${(props) => props.theme.space[4]};
+  margin: ${(props) => props.theme.space[1]};
+  font-family: Oswald_400Regular;
 `;
 
 const RestaurantCardCover = styled(Card.Cover)`
-  padding: ${(props) => props.theme.lineHeights.copy};
-  backgroundcolor: ${(props) => props.theme.colors.ui.primary};
+  margin-top: ${(props) => props.theme.space[4]};
+  margin-left: ${(props) => props.theme.space[4]};
+  margin-right: ${(props) => props.theme.space[4]};
+  backgroundcolor: ${(props) => props.theme.colors.ui.success};
 `;
-export const ResaturantInfoCard = ({ restaurant = {} }) => {
-  const [fontsLoaded] = useFonts({
-    Roboto_400Regular_Italic,
-  });
 
+const Info = styled.View`
+  padding: ${(props) => props.theme.space[4]};
+`;
+
+const Address = styled.Text`
+  padding: ${(props) => props.theme.space[2]};
+  font-size: 14px;
+  font-family: Oswald_400Regular;
+`;
+
+const Rating = styled.View`
+  flex-direction: row;
+  padding: ${(props) => props.theme.space[2]};
+`;
+
+const RestaurantCardContent = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const ResaturantInfoCard = ({ restaurant = {}, fontFamily }) => {
   const {
     name = "Rajesh dai ko chiya pasal",
     address = "bato side ko rukh muni",
@@ -34,27 +57,34 @@ export const ResaturantInfoCard = ({ restaurant = {} }) => {
     isClosedTemporarily = false,
   } = restaurant;
 
-  if (!fontsLoaded) {
-    return <Text>Loading...</Text>;
-  }
+  const ratingArray = Array.from(new Array(Math.floor(rating)));
 
   return (
     <RestaurantCard style={styles.card} elevation={5}>
-      <Card.Title
-        title={name}
-        subtitle={address}
-      />
       <RestaurantCardCover source={{ uri: photos }} style={styles.cover} />
-      <Card.Content style={styles.row}>
-        <View>
-          <Title variant="bodyMedium">{rating}</Title>
-          <Title variant="bodyMedium">{openingHours ? "Open" : "Closed"}</Title>
-        </View>
+      <RestaurantCardContent>
+        <Info>
+          <Title variant="bodyMedium">{name}</Title>
+          <Address>{address}</Address>
+          <Rating>
+            {ratingArray.map(() => (
+              <SvgXml xml={star} width={20} height={20} />
+            ))}
+          </Rating>
+        </Info>
 
-        <Card.Actions>
-          <Button>Ok</Button>
-        </Card.Actions>
-      </Card.Content>
+        <Info style={styles.row}>
+          <View>
+            <Title variant="bodyMedium">
+              {openingHours ? (
+                <SvgXml xml={open} width={50} height={50} />
+              ) : (
+                "Closed"
+              )}
+            </Title>
+          </View>
+        </Info>
+      </RestaurantCardContent>
     </RestaurantCard>
   );
 };
