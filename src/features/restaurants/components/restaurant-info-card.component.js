@@ -1,11 +1,15 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Image } from "react-native";
 import { Button, Card } from "react-native-paper";
 import styled from "styled-components/native";
 
 import { SvgXml } from "react-native-svg";
 import star from "../../../../assets/star";
 import open from "../../../../assets/open";
+
+import { Spacer } from "../../../components/spacer/spacer.components";
+
+import { useFonts, Oswald_400Regular } from "@expo-google-fonts/oswald";
 
 const Title = styled.Text`
   padding: ${(props) => props.theme.space[2]};
@@ -46,13 +50,17 @@ const RestaurantCardContent = styled.View`
   justify-content: space-between;
 `;
 
-export const ResaturantInfoCard = ({ restaurant = {}, fontFamily }) => {
+export const ResaturantInfoCard = ({ restaurant = {} }) => {
+  const [fontsLoaded] = useFonts({
+    Oswald_400Regular,
+  });
+
   const {
-    name = "Rajesh dai ko chiya pasal",
-    address = "bato side ko rukh muni",
-    rating = 5,
+    name = "Jiten dai ko chiya pasal",
+    address = "IIMS",
+    rating = 3,
     photos = "https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    icon,
+    icon = "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
     openingHours = true,
     isClosedTemporarily = false,
   } = restaurant;
@@ -67,7 +75,7 @@ export const ResaturantInfoCard = ({ restaurant = {}, fontFamily }) => {
           <Title variant="bodyMedium">{name}</Title>
           <Address>{address}</Address>
           <Rating>
-            {ratingArray.map(() => (
+            {ratingArray.map((index) => (
               <SvgXml xml={star} width={20} height={20} />
             ))}
           </Rating>
@@ -76,11 +84,33 @@ export const ResaturantInfoCard = ({ restaurant = {}, fontFamily }) => {
         <Info style={styles.row}>
           <View>
             <Title variant="bodyMedium">
-              {openingHours ? (
-                <SvgXml xml={open} width={50} height={50} />
+              {isClosedTemporarily ? (
+                <>
+                  <Spacer variant="left.large" />
+                  <Text style={{ color: "red" }}>Closed Temporarily</Text>
+                </>
+              ) : isClosedTemporarily && !openingHours ? (
+                <>
+                  <Spacer variant="left.large" />
+                  <Text style={{ color: "red" }}>Closed Temporarily</Text>
+                </>
+              ) : !isClosedTemporarily && openingHours ? (
+                <>
+                  <Spacer variant="left.large" />
+                  <SvgXml xml={open} width={50} height={50} />
+                </>
               ) : (
-                "Closed"
+                !openingHours && (
+                  <>
+                    <Spacer variant="left.large" />
+                    <Image
+                      source={{ uri: icon }}
+                      style={{ width: 50, height: 50 }}
+                    />
+                  </>
+                )
               )}
+              <Spacer variant="left.large" />
             </Title>
           </View>
         </Info>

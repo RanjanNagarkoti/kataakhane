@@ -19,7 +19,7 @@ const RestaurantListContainer = styled.View`
   background-color: ${(props) => props.theme.colors.ui.tertiary};
 `;
 
-export const RestaurantsScreen = (props) => {
+export const RestaurantsScreen = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const onChangeSearch = (query) => setSearchQuery(query);
@@ -33,7 +33,7 @@ export const RestaurantsScreen = (props) => {
         />
       </SearchContainer>
       <RestaurantListContainer>
-        <ResaturantInfoCard fontFamily={props.fontFamily} />
+        <ResaturantInfoCard/>
       </RestaurantListContainer>
     </SafeArea>
   );
