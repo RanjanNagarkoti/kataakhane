@@ -86,23 +86,23 @@ export const ResaturantInfoCard = ({ restaurant = {} }) => {
             <Title variant="bodyMedium">
               {isClosedTemporarily ? (
                 <>
-                  <Spacer variant="left.large" />
+                  <Spacer position="left" size="large" />
                   <Text style={{ color: "red" }}>Closed Temporarily</Text>
                 </>
               ) : isClosedTemporarily && !openingHours ? (
                 <>
-                  <Spacer variant="left.large" />
+                  <Spacer position="left" size="large" />
                   <Text style={{ color: "red" }}>Closed Temporarily</Text>
                 </>
               ) : !isClosedTemporarily && openingHours ? (
                 <>
-                  <Spacer variant="left.large" />
+                  <Spacer position="left" size="large" />
                   <SvgXml xml={open} width={50} height={50} />
                 </>
               ) : (
                 !openingHours && (
                   <>
-                    <Spacer variant="left.large" />
+                    <Spacer position="left" size="large" />
                     <Image
                       source={{ uri: icon }}
                       style={{ width: 50, height: 50 }}
@@ -110,7 +110,7 @@ export const ResaturantInfoCard = ({ restaurant = {} }) => {
                   </>
                 )
               )}
-              <Spacer variant="left.large" />
+              <Spacer position="left" size="large"/>
             </Title>
           </View>
         </Info>
