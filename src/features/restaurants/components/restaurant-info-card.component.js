@@ -1,58 +1,27 @@
 import React from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
-import { Button, Card } from "react-native-paper";
-import styled from "styled-components/native";
+import { StyleSheet, View, Image } from "react-native";
 
 import { SvgXml } from "react-native-svg";
 import star from "../../../../assets/star";
 import open from "../../../../assets/open";
 
 import { Spacer } from "../../../components/spacer/spacer.components";
+import { Text } from "../../../components/typography/text.component";
 
-import { useFonts, Oswald_400Regular } from "@expo-google-fonts/oswald";
+import { useFonts, Oswald400Regular } from "@expo-google-fonts/oswald";
 
-const Title = styled.Text`
-  padding: ${(props) => props.theme.space[2]};
-  color: ${(props) => props.theme.colors.text.primary};
-  font-family: Oswald_400Regular;
-`;
-
-const RestaurantCard = styled(Card)`
-  backgroundcolor: ${(props) => props.theme.colors.ui.primary};
-  margin: ${(props) => props.theme.space[1]};
-  font-family: Oswald_400Regular;
-`;
-
-const RestaurantCardCover = styled(Card.Cover)`
-  margin-top: ${(props) => props.theme.space[4]};
-  margin-left: ${(props) => props.theme.space[4]};
-  margin-right: ${(props) => props.theme.space[4]};
-  backgroundcolor: ${(props) => props.theme.colors.ui.success};
-`;
-
-const Info = styled.View`
-  padding: ${(props) => props.theme.space[4]};
-`;
-
-const Address = styled.Text`
-  padding: ${(props) => props.theme.space[2]};
-  font-size: 14px;
-  font-family: Oswald_400Regular;
-`;
-
-const Rating = styled.View`
-  flex-direction: row;
-  padding: ${(props) => props.theme.space[2]};
-`;
-
-const RestaurantCardContent = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
-`;
+import {
+  RestaurantCard,
+  RestaurantCardCover,
+  Info,
+  Address,
+  Rating,
+  RestaurantCardContent,
+} from "./restaurant-info.styles";
 
 export const ResaturantInfoCard = ({ restaurant = {} }) => {
   const [fontsLoaded] = useFonts({
-    Oswald_400Regular,
+    Oswald400Regular,
   });
 
   const {
@@ -62,7 +31,7 @@ export const ResaturantInfoCard = ({ restaurant = {} }) => {
     photos = "https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     icon = "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
     openingHours = true,
-    isClosedTemporarily = false,
+    isClosedTemporarily = true,
   } = restaurant;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
@@ -72,7 +41,7 @@ export const ResaturantInfoCard = ({ restaurant = {} }) => {
       <RestaurantCardCover source={{ uri: photos }} style={styles.cover} />
       <RestaurantCardContent>
         <Info>
-          <Title variant="bodyMedium">{name}</Title>
+          <Text variant="label">{name}</Text>
           <Address>{address}</Address>
           <Rating>
             {ratingArray.map((index) => (
@@ -83,35 +52,33 @@ export const ResaturantInfoCard = ({ restaurant = {} }) => {
 
         <Info style={styles.row}>
           <View>
-            <Title variant="bodyMedium">
-              {isClosedTemporarily ? (
+            {isClosedTemporarily ? (
+              <>
+                <Spacer position="left" size="large" />
+                <Text variant="error">Closed Temporarily</Text>
+              </>
+            ) : isClosedTemporarily && !openingHours ? (
+              <>
+                <Spacer position="left" size="large" />
+                <Text variant="error">Closed Temporarily</Text>
+              </>
+            ) : !isClosedTemporarily && openingHours ? (
+              <>
+                <Spacer position="left" size="large" />
+                <SvgXml xml={open} width={50} height={50} />
+              </>
+            ) : (
+              !openingHours && (
                 <>
                   <Spacer position="left" size="large" />
-                  <Text style={{ color: "red" }}>Closed Temporarily</Text>
+                  <Image
+                    source={{ uri: icon }}
+                    style={{ width: 50, height: 50 }}
+                  />
                 </>
-              ) : isClosedTemporarily && !openingHours ? (
-                <>
-                  <Spacer position="left" size="large" />
-                  <Text style={{ color: "red" }}>Closed Temporarily</Text>
-                </>
-              ) : !isClosedTemporarily && openingHours ? (
-                <>
-                  <Spacer position="left" size="large" />
-                  <SvgXml xml={open} width={50} height={50} />
-                </>
-              ) : (
-                !openingHours && (
-                  <>
-                    <Spacer position="left" size="large" />
-                    <Image
-                      source={{ uri: icon }}
-                      style={{ width: 50, height: 50 }}
-                    />
-                  </>
-                )
-              )}
-              <Spacer position="left" size="large"/>
-            </Title>
+              )
+            )}
+            <Spacer position="left" size="large" />
           </View>
         </Info>
       </RestaurantCardContent>
