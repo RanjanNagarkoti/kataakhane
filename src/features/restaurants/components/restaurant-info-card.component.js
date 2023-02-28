@@ -25,7 +25,7 @@ export const ResaturantInfoCard = ({ restaurant = {} }) => {
   });
 
   const {
-    name = "Jiten dai ko chiya pasal",
+    name = "IIMS ",
     address = "IIMS",
     rating = 3,
     photos = "https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
