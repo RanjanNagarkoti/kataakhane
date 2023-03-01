@@ -6,7 +6,7 @@ export const RestaurantCard = styled(Card)`
   backgroundcolor: ${(props) => props.theme.colors.ui.primary};
   margin: ${(props) => props.theme.space[1]};
   margin-bottom: ${(props) => props.theme.space[3]};
-  font-family: Oswald400Regular;
+  font-family: Oswald_400Regular;
 `;
 
 export const RestaurantCardCover = styled(Card.Cover)`

@@ -8,8 +8,6 @@ import open from "../../../../assets/open";
 import { Spacer } from "../../../components/spacer/spacer.components";
 import { Text } from "../../../components/typography/text.component";
 
-import { useFonts, Oswald400Regular } from "@expo-google-fonts/oswald";
-
 import {
   RestaurantCard,
   RestaurantCardCover,
@@ -20,10 +18,6 @@ import {
 } from "./restaurant-info.styles";
 
 export const ResaturantInfoCard = ({ restaurant = {} }) => {
-  const [fontsLoaded] = useFonts({
-    Oswald400Regular,
-  });
-
   const {
     name = "IIMS ",
     address = "IIMS",
