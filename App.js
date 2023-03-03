@@ -32,8 +32,8 @@ export default function App() {
   const Tab = createBottomTabNavigator();
 
   const TAB_ICON = {
-    Restaurants: "md-restaurant",
-    Map: "md-map",
+    Restaurant: "md-restaurant",
+    Home: "md-home",
     Settings: "md-settings",
   };
 
@@ -48,43 +48,24 @@ export default function App() {
     </SafeArea>
   );
 
-  // const createScreenOptions = ({ route }) => {
-  //   const iconName = TAB_ICON[route.name];
-  //   return {
-  //     tabBarIcon: ({ color, size }) => {
-  //       <Ionicons name={iconName} size={size} color={color} />;
-  //     },
-  //   };
-  // };
+  const createScreenOptions = ({ route }) => {
+    const iconName = TAB_ICON[route.name];
+    return {
+      tabBarIcon: ({ size, color }) => (
+        <Ionicons name={iconName} size={size} color={color} />
+      ),
+    };
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
         <Tab.Navigator
-          // screenOptions={createScreenOptions}
-          // tabBarOptions={{
-          //   activeTintColor: "tomato",
-          //   inactiveTintColor: "gray",
-          // }}
-          screenOptions={({ route }) => ({
-            tabBarIcon: ({ focused, color, size }) => {
-              let iconName;
-
-              if (route.name === "Home") {
-                iconName = focused
-                  ? "ios-information-circle"
-                  : "ios-information-circle-outline";
-              } else if (route.name === "Settings") {
-                iconName = focused ? "ios-list" : "ios-list-outline";
-              } else if (route.name === "Restaurant") {
-                iconName = "md-restaurant";
-              }
-
-              // You can return any component that you like here!
-              return <Ionicons name={iconName} size={size} color={color} />;
-            },
-            tabBarActiveTintColor: "tomato",
-            tabBarInactiveTintColor: "gray",
-          })}
+          screenOptions={createScreenOptions}
+          tabBarOptions={{
+            activeTintColor: "tomato",
+            inactiveTintColor: "gray",
+          }}
         >
           <Tab.Screen name="Home" component={Map} />
           <Tab.Screen name="Settings" component={Settings} />
