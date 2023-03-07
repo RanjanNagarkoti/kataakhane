@@ -1,0 +1,160 @@
+{
+  "html_attributions": [],
+  "next_page_token": "some token",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 27.7046,
+          "lng": 85.3072
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 27.7061369302915,
+            "lng": 85.3086550802915
+          },
+          "southwest": {
+            "lat": 27.7034389697085,
+            "lng": 85.3059571197085
+          }
+        }
+      },
+      "ix": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "name": "Sukmel Café",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3672,
+          "html_attributions": [
+            ""
+          ],
+          "photo_reference": "",
+          "width": 6786
+        }
+      ],
+      "place_id": "some place id 141",
+      "plus_code": {
+        "compound_code": "",
+        "global_code": ""
+      },
+      "price_level": 3,
+      "rating": 4.4,
+      "reference": "",
+      "scope": "",
+      "types": [
+        "cafe",
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1675,
+      "vicinity": "Maru galli, Basantapur"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 27.704279504045484, 
+          "lng": 85.3066036047215
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 27.704279504045484, 
+            "lng": 85.3066036047215
+          },
+          "southwest": {
+            "lat": 27.704279504045484, 
+            "lng": 85.3066036047215
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "name": "Ganesha Corner Tap and Kitchen",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2668,
+          "html_attributions": [
+            ""
+          ],
+          "photo_reference": "",
+          "width": 4000
+        }
+      ],
+      "place_id": "some place id 58",
+      "plus_code": {
+        "compound_code": "",
+        "global_code": ""
+      },
+      "price_level": 2,
+      "rating": 3.8,
+      "reference": "",
+      "scope": "",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 549,
+      "vicinity": "Lyaku Marg, Basantapur"
+    },{
+      "business_status": "CLOSED_TEMPORARILY",
+      "geometry": {
+        "location": {
+          "lat": 27.708281636415332, 
+          "lng": 85.31680390144884
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 27.708281636415332, 
+            "lng": 85.31680390144884
+          },
+          "southwest": {
+            "lat": 27.708281636415332, 
+            "lng": 85.31680390144884
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "name": "Ambeshor Restaurante",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 3456,
+          "html_attributions": [
+            ""
+          ],
+          "photo_reference": "",
+          "width": 4608
+        }
+      ],
+      "place_id": "some place id 66",
+      "plus_code": {
+        "compound_code": "",
+        "global_code": "",
+      },
+      "price_level": 3,
+      "rating": 4.5,
+      "reference": "",
+      "scope": "",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 405,
+      "vicinity": "Durbarmarg, Kathmandu"
+    },
+    ],
+    "status": "OK"
+  }

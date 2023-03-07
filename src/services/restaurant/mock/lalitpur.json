@@ -1,0 +1,413 @@
+{
+    "html_attributions": [],
+    "next_page_token": "some token",
+    "results": [
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 27.660438290124766, 
+            "lng": 85.32466313413266
+          },
+          "viewport": {
+            "northeast": {
+              "lat": 27.660438290124766, 
+              "lng": 85.32466313413266
+            },
+            "southwest": {
+              "lat": 27.660438290124766, 
+              "lng": 85.32466313413266
+            }
+          }
+        },
+        "ix": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "name": "Sukmel Café",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 3672,
+            "html_attributions": [
+              ""
+            ],
+            "photo_reference": "",
+            "width": 6786
+          }
+        ],
+        "place_id": "some place id 1141",
+        "plus_code": {
+          "compound_code": "",
+          "global_code": ""
+        },
+        "price_level": 3,
+        "rating": 4.4,
+        "reference": "",
+        "scope": "",
+        "types": [
+          "cafe",
+          "bar",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 1675,
+        "vicinity": "Swatha galli, Lalitpur"
+      },
+       {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 27.637958957185415, 
+            "lng": 85.33427374570088
+          },
+          "viewport": {
+            "northeast": {
+                "lat": 27.637958957185415, 
+                "lng": 85.33427374570088
+            },
+            "southwest": {
+                "lat": 27.637958957185415, 
+                "lng": 85.33427374570088
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+        "name": "Harisiddhi Royal York",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 2048,
+            "html_attributions": [
+              ""
+            ],
+            "photo_reference": "",
+            "width": 1621
+          }
+        ],
+        "place_id": "some place id 162",
+        "plus_code": {
+          "compound_code": "",
+          "global_code": ""
+        },
+        "rating": 4.5,
+        "reference": "",
+        "scope": "",
+        "types": [
+          "lodging",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 8383,
+        "vicinity": "Salan Marg Paschimm, Lalitpur"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 27.637725810280628, 
+            "lng": 85.32823227197596
+          },
+          "viewport": {
+            "northeast": {
+                "lat": 27.637725810280628, 
+                "lng": 85.32823227197596
+            },
+            "southwest": {
+                "lat": 27.637725810280628, 
+                "lng": 85.32823227197596
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+        "name": "HOTEL Krishna",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 1924,
+            "html_attributions": [
+              ""
+            ],
+            "photo_reference": "",
+            "width": 3598
+          }
+        ],
+        "place_id": "some place id 163",
+        "plus_code": {
+          "compound_code": "",
+          "global_code": ""
+        },
+        "rating": 4.3,
+        "reference": "",
+        "scope": "",
+        "types": [
+          "lodging",
+          "bar",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 502,
+        "vicinity": "Shree Krishna Galli, Lalitpur"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 27.64108476914957, 
+            "lng": 85.31929374219202
+          },
+          "viewport": {
+            "northeast": {
+                "lat": 27.64108476914957, 
+                "lng": 85.31929374219202
+            },
+            "southwest": {
+                "lat": 27.64108476914957, 
+                "lng": 85.31929374219202
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "name": "Dholahiti Lounge and Bistro",
+        "photos": [
+          {
+            "height": 1500,
+            "html_attributions": [
+              ""
+            ],
+            "photo_reference": "",
+            "width": 2048
+          }
+        ],
+        "place_id": "some place id 64",
+        "plus_code": {
+          "compound_code": "",
+          "global_code": ""
+        },
+        "rating": 4.4,
+        "reference": "",
+        "scope": "",
+        "types": [
+          "restaurant",
+          "bar",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 9,
+        "vicinity": "Rakta Shiddhi Binayak Marg, Lalitpur"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 27.646753271466824, 
+            "lng": 85.3157411658385
+          },
+          "viewport": {
+            "northeast": {
+                "lat": 27.646753271466824, 
+                "lng": 85.3157411658385
+            },
+            "southwest": {
+                "lat": 27.646753271466824, 
+            "lng": 85.3157411658385
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "name": "Jesus & Buddha Café Grill, Yonge & Front",
+        "opening_hours": {
+          "open_now": false
+        },
+        "photos": [
+          {
+            "height": 480,
+            "html_attributions": [
+              ""
+            ],
+            "photo_reference": "",
+            "width": 640
+          }
+        ],
+        "place_id": "some place id 165",
+        "plus_code": {
+          "compound_code": "",
+          "global_code": ""
+        },
+        "price_level": 2,
+        "rating": 4,
+        "reference": "",
+        "scope": "",
+        "types": [
+          "restaurant",
+          "night_club",
+          "bar",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 1382,
+        "vicinity": "Buddha Marg Loha Chowk, Lalitpur"
+      },
+      {
+        "business_status": "CLOSED_TEMPORARILY",
+        "geometry": {
+          "location": {
+            "lat": 27.65334822027012,
+            "lng":  85.31337740021334
+          },
+          "viewport": {
+            "northeast": {
+                "lat": 27.65334822027012,
+                "lng":  85.31337740021334
+            },
+            "southwest": {
+                "lat": 27.65334822027012,
+                "lng":  85.31337740021334
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "name": "Hanumante Restaurante",
+        "permanently_closed": true,
+        "photos": [
+          {
+            "height": 3456,
+            "html_attributions": [
+              ""
+            ],
+            "photo_reference": "",
+            "width": 4608
+          }
+        ],
+        "place_id": "some place id 166",
+        "plus_code": {
+          "compound_code": "",
+          "global_code": ""
+        },
+        "price_level": 3,
+        "rating": 4.5,
+        "reference": "",
+        "scope": "",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 405,
+        "vicinity": "Shovanagar Marg, Lalitpur"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 27.657811595175115, 
+            "lng": 85.31728862128203
+          },
+          "viewport": {
+            "northeast": {
+                "lat": 27.657811595175115, 
+                "lng": 85.31728862128203
+            },
+            "southwest": {
+                "lat": 27.657811595175115, 
+            "lng": 85.31728862128203
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "name": "Hariyali Choyela Ghar",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 3840,
+            "html_attributions": [
+              ""
+            ],
+            "photo_reference": "",
+            "width": 5760
+          }
+        ],
+        "place_id": "some place id 167",
+        "plus_code": {
+          "compound_code": "",
+          "global_code": ""
+        },
+        "price_level": 2,
+        "rating": 4.2,
+        "reference": "",
+        "scope": "",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 3698,
+        "vicinity": "Tikhedebal Marg, Lalitpur"
+      },
+      {
+        "business_status": "CLOSED_TEMPORARILY",
+        "geometry": {
+          "location": {
+            "lat": 27.66138383729192, 
+            "lng": 85.31878059911841
+          },
+          "viewport": {
+            "northeast": {
+                "lat": 27.66138383729192, 
+                "lng": 85.31878059911841
+            },
+            "southwest": {
+                "lat": 27.66138383729192, 
+                "lng": 85.31878059911841
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "name": "The Dakshin Steakhouse + Bar",
+        "permanently_closed": true,
+        "photos": [
+          {
+            "height": 2268,
+            "html_attributions": [
+              ""
+            ],
+            "photo_reference": "",
+            "width": 4032
+          }
+        ],
+        "place_id": "some place id 168",
+        "plus_code": {
+          "compound_code": "",
+          "global_code": ""
+        },
+        "price_level": 3,
+        "rating": 4.5,
+        "reference": "",
+        "scope": "",
+        "types": [
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 2954,
+        "vicinity": "Ring Rd Uttar, Lalitpur"
+      }
+      ],
+      "status": "OK"
+    }

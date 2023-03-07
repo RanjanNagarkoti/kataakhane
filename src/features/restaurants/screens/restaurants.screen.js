@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Searchbar } from "react-native-paper";
 import { FlatList } from "react-native";
 import styled from "styled-components";
@@ -10,6 +10,9 @@ const SearchContainer = styled.View`
 `;
 
 export const RestaurantsScreen = () => {
+  const RestaurantContext = useContext(RestaurantContext);
+  console.log(RestaurantContext);
+
   const [searchQuery, setSearchQuery] = useState("");
 
   const onChangeSearch = (query) => setSearchQuery(query);

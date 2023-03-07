@@ -16,6 +16,9 @@ import {
 } from "@expo-google-fonts/oswald";
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 
+import { restaurantRequest } from "./src/services/restaurant/restaurants.service";
+import { RestaurantContextProvider } from "./src/services/restaurant/restaurants.context";
+
 export default function App() {
   let [oswaldLoaded] = useOswald({
     Oswald_400Regular,
@@ -59,21 +62,22 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <NavigationContainer>
-        <Tab.Navigator
-          screenOptions={createScreenOptions}
-          tabBarOptions={{
-            activeTintColor: "tomato",
-            inactiveTintColor: "gray",
-          }}
-        >
-          <Tab.Screen name="Home" component={Map} />
-          <Tab.Screen name="Settings" component={Settings} />
-          <Tab.Screen name="Restaurant" component={RestaurantsScreen} />
-        </Tab.Navigator>
-      </NavigationContainer>
-      {/* <RestaurantsScreen /> */}
-      <StatusBar style="auto" />
+      <RestaurantContextProvider>
+        <NavigationContainer>
+          <Tab.Navigator
+            screenOptions={createScreenOptions}
+            tabBarOptions={{
+              activeTintColor: "tomato",
+              inactiveTintColor: "gray",
+            }}
+          >
+            <Tab.Screen name="Home" component={Map} />
+            <Tab.Screen name="Settings" component={Settings} />
+            <Tab.Screen name="Restaurant" component={RestaurantsScreen} />
+          </Tab.Navigator>
+        </NavigationContainer>
+        <StatusBar style="auto" />
+      </RestaurantContextProvider>
     </ThemeProvider>
   );
 }

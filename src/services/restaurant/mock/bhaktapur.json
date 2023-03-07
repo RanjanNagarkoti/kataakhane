@@ -1,0 +1,178 @@
+{
+    "html_attributions": [],
+    "next_page_token": "some token",
+    "results": [
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+            "location": {
+              "lat": 27.677085641196374, 
+              "lng": 85.43675721202986
+            },
+            "viewport": {
+              "northeast": {
+                "lat": 27.677085641196374, 
+                "lng": 85.43675721202986
+              },
+              "southwest": {
+                "lat": 27.677085641196374, 
+                "lng": 85.43675721202986
+              }
+            }
+          },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+        "name": "Juju City Centre",
+        "opening_hours": {
+          "open_now": true
+        },
+        "photos": [
+          {
+            "height": 0,
+            "html_attributions": [],
+            "photo_reference": "",
+            "width": 0
+          }
+        ],
+        "place_id": "some place id 311",
+        "rating": 4,
+        "reference": "",
+        "user_ratings_total": 832,
+        "vicinity": "Garud Kundal Road, Bhaktapur"
+      },
+      {
+        "geometry": {
+          "location": {
+            "lat": 27.67336487034475, 
+            "lng": 85.43215454245666
+          },
+          "viewport": {
+            "northeast": {
+                "lat": 27.67336487034475, 
+                "lng": 85.43215454245666
+            },
+            "southwest": {
+                "lat": 27.67336487034475, 
+                "lng": 85.43215454245666
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+        "name": "Khwopa Hotel & Seminar",
+        "photos": [
+          {
+            "height": 1536,
+            "html_attributions": [],
+            "photo_reference": "",
+            "width": 2048
+          }
+        ],
+        "place_id": "some place id 312",
+        "plus_code": {
+          "compound_code": "",
+          "global_code": ""
+        },
+        "reference": "",
+        "scope": "",
+        "types": [
+          "spa",
+          "lodging",
+          "restaurant",
+          "food",
+          "gym",
+          "health",
+          "point_of_interest",
+          "establishment"
+        ],
+        "vicinity": "Damla Galli, Bhaktapur"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 27.67536383309525, 
+            "lng": 85.42871765323086
+          },
+          "viewport": {
+            "northeast": {
+                "lat": 27.67536383309525, 
+                "lng": 85.42871765323086
+            },
+            "southwest": {
+                "lat": 27.67536383309525, 
+                "lng": 85.42871765323086
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+        "name": "Hotel Taumadi",
+        "opening_hours": {
+          "open_now": false
+        },
+        "photos": [
+          {
+            "height": 2000,
+            "html_attributions": [""],
+            "photo_reference": "",
+            "width": 3000
+          }
+        ],
+        "place_id": "some place id 313",
+        "plus_code": {
+          "compound_code": "",
+          "global_code": ""
+        },
+        "rating": 4.3,
+        "reference": "",
+        "scope": "",
+        "types": [
+          "travel_agency",
+          "lodging",
+          "restaurant",
+          "food",
+          "point_of_interest",
+          "establishment"
+        ],
+        "user_ratings_total": 321,
+        "vicinity": "Nagarkot Road, Bhaktapur"
+      },
+      {
+        "business_status": "OPERATIONAL",
+        "geometry": {
+          "location": {
+            "lat": 27.6776756679775,
+            "lng":  85.43630709906563
+          },
+          "viewport": {
+            "northeast": {
+                "lat": 27.6776756679775,
+                "lng":  85.43630709906563
+            },
+            "southwest": {
+                "lat": 27.6776756679775,
+                "lng":  85.43630709906563
+            }
+          }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+        "name": "The Dekocha Inn",
+        "opening_hours": {
+          "open_now": false
+        },
+        "photos": [
+          {
+            "height": 0,
+            "html_attributions": [],
+            "photo_reference": "",
+            "width": 0
+          }
+        ],
+        "place_id": "some place id 314",
+        "rating": 4.6,
+        "reference": "",
+        "user_ratings_total": 152,
+        "vicinity": "Dekocha - Kamalvinayak Rd, Bhaktapur"
+      }
+    ],
+    "status": "OK"
+  }
+  
