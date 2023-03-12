@@ -1,43 +1,43 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Searchbar } from "react-native-paper";
 import { FlatList } from "react-native";
-import styled from "styled-components";
-import { ResaturantInfoCard } from "../components/restaurant-info-card.component";
+import styled from "styled-components/native";
+
 import { SafeArea } from "../../../components/utility/safe-area.component";
+import { RestaurantInfoCard } from "../components/restaurant-info.component";
+import { Spacer } from "../../../components/spacer/spacer.components";
+import { RestaurantContext } from "../../../services/restaurants/restaurants.context";
 
 const SearchContainer = styled.View`
-  padding: ${(props) => props.theme.space[4]};
+  padding: ${(props) => props.theme.space[3]};
 `;
 
+const RestaurantList = styled(FlatList).attrs({
+  contentContainerStyle: {
+    padding: 16,
+  },
+})``;
+
 export const RestaurantsScreen = () => {
-  const RestaurantContext = useContext(RestaurantContext);
-  console.log(RestaurantContext);
-
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const onChangeSearch = (query) => setSearchQuery(query);
+  const { isLoading, error, restaurants } = useContext(RestaurantContext);
   return (
     <SafeArea>
       <SearchContainer>
-        <Searchbar
-          placeholder="Search"
-          onChangeText={onChangeSearch}
-          value={searchQuery}
-        />
+        <Searchbar />
       </SearchContainer>
-      <FlatList
-        data={[
-          { name: 1 },
-          { name: 2 },
-          { name: 3 },
-          { name: 4 },
-          { name: 5 },
-          { name: 6 },
-          { name: 7 },
-        ]}
-        renderItem={() => <ResaturantInfoCard />}
+      <RestaurantList
+        data={restaurants}
+        renderItem={({ item }) => {
+          console.log(item);
+          return (
+            <>
+              <Spacer position="bottom" size="large">
+                <RestaurantInfoCard restaurant={item} />
+              </Spacer>
+            </>
+          );
+        }}
         keyExtractor={(item) => item.name}
-        contentContainerStyle={{ margin: 12 }}
       />
     </SafeArea>
   );

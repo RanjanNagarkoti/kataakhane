@@ -106,7 +106,8 @@
       ],
       "user_ratings_total": 549,
       "vicinity": "Lyaku Marg, Basantapur"
-    },{
+    },
+    {
       "business_status": "CLOSED_TEMPORARILY",
       "geometry": {
         "location": {
@@ -140,7 +141,7 @@
       "place_id": "some place id 66",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 3,
       "rating": 4.5,
@@ -155,6 +156,55 @@
       "user_ratings_total": 405,
       "vicinity": "Durbarmarg, Kathmandu"
     },
+    {
+      "business_status": "CLOSED_TEMPORARILY",
+      "geometry": {
+        "location": {
+          "lat": 27.70384086096534,  
+          "lng": 85.33103143159403
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 27.70384086096534,  
+            "lng": 85.33103143159403
+          },
+          "southwest": {
+            "lat": 27.70384086096534,  
+            "lng": 85.33103143159403
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "name": "Purustam Royal Restaurante",
+      "permanently_closed": false,
+      "photos": [
+        {
+          "height": 3456,
+          "html_attributions": [
+            ""
+          ],
+          "photo_reference": "",
+          "width": 4608
+        }
+      ],
+      "place_id": "some place id 67",
+      "plus_code": {
+        "compound_code": "",
+        "global_code": ""
+      },
+      "price_level": 3,
+      "rating": 4.5,
+      "reference": "",
+      "scope": "",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 305,
+      "vicinity": "Maitidevi, Kathmandu"
+    }
     ],
     "status": "OK"
   }
