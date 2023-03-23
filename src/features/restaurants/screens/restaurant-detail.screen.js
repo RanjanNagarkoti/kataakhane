@@ -20,19 +20,20 @@ export const RestaurantDetailScreen = ({ route }) => {
           expanded={breakfastExpanded}
           onPress={() => setBreakfastExpanded(!breakfastExpanded)}
         >
-          <List.Item title="Matka chiya with jery swari" />
-          <List.Item title="chana tarkari" />
-          <List.Item title="anda chana" />
+          <List.Item title="Matka Chiya with Jerry Swari" />
+          <List.Item title="Chana Tarkari with Haas ko anda" />
+          <List.Item title="Eggs Benedict" />
         </List.Accordion>
+
         <List.Accordion
           title="Lunch"
           left={(props) => <List.Icon {...props} icon="hamburger" />}
           expanded={lunchExpanded}
           onPress={() => setLunchExpanded(!lunchExpanded)}
         >
-          <List.Item title="Matka chiya with jery swari" />
-          <List.Item title="chana tarkari" />
-          <List.Item title="anda chana" />
+          <List.Item title="Samosa Tarkari with bhatora" />
+          <List.Item title="Alu chiura with sukuti" />
+          <List.Item title="Steak Sandwich" />
         </List.Accordion>
         <List.Accordion
           title="Dinner"
@@ -40,9 +41,9 @@ export const RestaurantDetailScreen = ({ route }) => {
           expanded={dinnerExpanded}
           onPress={() => setDinnerExpanded(!dinnerExpanded)}
         >
-          <List.Item title="Matka chiya with jery swari" />
-          <List.Item title="chana tarkari" />
-          <List.Item title="anda chana" />
+          <List.Item title="Daal Bhat Achar" />
+          <List.Item title="Roti Tarkari" />
+          <List.Item title="Veal cutlet with chicken mushroom" />
         </List.Accordion>
         <List.Accordion
           title="Drinks"
@@ -50,9 +51,9 @@ export const RestaurantDetailScreen = ({ route }) => {
           expanded={drinksExpanded}
           onPress={() => setDrinksExpanded(!drinksExpanded)}
         >
-          <List.Item title="Matka chiya with jery swari" />
-          <List.Item title="chana tarkari" />
-          <List.Item title="anda chana" />
+          <List.Item title="Taja Juice" />
+          <List.Item title="Tongba" />
+          <List.Item title="Modelo" />
         </List.Accordion>
       </ScrollView>
     </SafeArea>
