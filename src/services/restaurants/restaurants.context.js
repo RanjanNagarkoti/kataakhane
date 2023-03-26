@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
-import { LocationContext } from "../location/locaiton.context";
+import { LocationContext } from "../location/location.context";
 
-import { restaurantRequest, restaurantsTransform } from "./restaurants.service";
+import { restaurantRequest, restaurantTransform } from "./restaurants.service";
 
 export const RestaurantContext = createContext();
 
@@ -15,7 +15,7 @@ export const RestaurantContextProvider = ({ children }) => {
     setIsLoading(true), setRestaurants([]);
     setTimeout(() => {
       restaurantRequest(loc)
-        .then(restaurantsTransform)
+        .then(restaurantTransform)
         .then((results) => {
           setIsLoading(false);
           setRestaurants(results);

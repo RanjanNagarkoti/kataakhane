@@ -1,4 +1,5 @@
 import React from "react";
+
 import styled from "styled-components/native";
 import { Text } from "../typography/text.component";
 
@@ -25,12 +26,14 @@ const Item = styled.View`
 
 const isAndroid = Platform.OS === "android";
 
-export const CompactRestaurantInfo = ({ restaurant }) => {
-  const Image = isAndroid ? CompactWebView : CompactImage;
+export const CompactRestaurantInfo = ({ restaurant, isMap }) => {
+  const Image = isAndroid && isMap ? CompactWebView : CompactImage;
   return (
     <Item>
       <Image source={{ uri: restaurant.photos[0] }} />
-      <Text variant="caption">{restaurant.name}</Text>
+      <Text center variant="caption" numberOfLines={3}>
+        {restaurant.name}
+      </Text>
     </Item>
   );
 };

@@ -1,0 +1,39 @@
+Why context ??
+Fetch the information that we need to fetch, getting the information we need to get,
+but then also giving the ability for any level to consume that information.
+
+context provides a way to pass data through the component tree without having
+to pass props down manually at every level.
+
+Promise is like binding the contract that we are going to get
+something in the future
+
+this will return a function internally that has resolve and reject function
+
+Fetch is one of the fetches, a standard that is build into every browser
+
+and what fetch does is, it is an interface around promises that wraps the
+ability to talk to external API
+
+Fetch return in response as json object
+
+json object is a simple javascript that return properties
+
+map() is the function that will itterate over every individual
+restaurant.
+
+map() funciton is a method that allows us to create new array by
+processing each element of an existing array. It allows us to
+transform an array without modifying the original array.
+
+context ko kaam : data lai globally data provide garney
+inside the react application
+
+service ko kaam : to determine what methods we want in
+order to get data from external services
+
+Geocoding is the process of converting addresses (like "1600 Amphitheatre Parkway, Mountain View, CA") into geographic coordinates (like latitude 37.423021 and longitude -122.083739), which you can use to place markers on a map, or position the map.
+
+Reverse geocoding is the process of converting geographic coordinates into a human-readable address.
+
+The Geocoding API provides a direct way to access these services via an HTTP request.

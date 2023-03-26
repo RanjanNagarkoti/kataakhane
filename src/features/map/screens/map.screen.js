@@ -1,33 +1,30 @@
 import React, { useContext, useEffect, useState } from "react";
 import MapView, { Callout, Marker } from "react-native-maps";
-
 import styled from "styled-components/native";
-import { LocationContext } from "../../../services/location/locaiton.context";
+import { LocationContext } from "../../../services/location/location.context";
 import { RestaurantContext } from "../../../services/restaurants/restaurants.context";
-import { Search } from "../../restaurants/search.component";
 import { MapCallout } from "../components/map-callout.component";
+import { Search } from "../components/search.component";
 
 const Map = styled(MapView)`
   height: 100%;
   width: 100%;
 `;
 
-const SomeText = styled.Text``;
-
 export const MapScreen = ({ navigation }) => {
   const { location } = useContext(LocationContext);
   const { restaurants = [] } = useContext(RestaurantContext);
-  const [latDelta, setlatDelta] = useState(0);
 
-  const { viewport, lat, lng } = location;
+  const [latDelta, setLatDelta] = useState(0);
+
+  const { lat, lng, viewport } = location;
 
   useEffect(() => {
     const northeastLat = viewport.northeast.lat;
     const southwestLat = viewport.southwest.lat;
 
-    setlatDelta(northeastLat - southwestLat);
+    setLatDelta(northeastLat - southwestLat);
   }, [location, viewport]);
-
   return (
     <>
       <Search />
@@ -36,7 +33,7 @@ export const MapScreen = ({ navigation }) => {
           latitude: lat,
           longitude: lng,
           latitudeDelta: latDelta,
-          longitudeDelta: 0.07,
+          longitudeDelta: 0.08,
         }}
       >
         {restaurants.map((restaurant) => {

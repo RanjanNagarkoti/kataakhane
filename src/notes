@@ -1,4 +1,18 @@
-Geocoding is the process of converting addresses (like "1600 Amphitheatre Parkway, Mountain View, CA") into geographic coordinates (like latitude 37.423021 and longitude -122.083739), which you can use to place markers on a map, or position the map.
+react navigation
+pressable
+pressable vs touchableopacity
+list accordion
+map
+map marker
 
-Reverse geocoding is the process of converting geographic coordinates into a human-readable address.
-The Geocoding API provides a direct way to access these services via an HTTP request.
+search Firebase
+then, login or register on Firebase
+then, create or add project
+then, in step 1 writing project name
+then, in step 2 turnoff enable google analytics
+
+npx expo install firebase
+
+npx expo install lottie-react-native
+it's a mobile library that parse adobe after effects animation exported
+to json and renders them natively
