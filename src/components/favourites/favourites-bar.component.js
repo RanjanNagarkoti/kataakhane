@@ -23,7 +23,7 @@ export const FavouritesBar = ({ favourites, onNavigate }) => {
         {favourites.map((restaurant) => {
           const key = restaurant.name;
           return (
-            <Spacer position="left">
+            <Spacer position="left" key={key} size="medium">
               <TouchableOpacity
                 onPress={() => onNavigate("RestaurantDetail", { restaurant })}
               >

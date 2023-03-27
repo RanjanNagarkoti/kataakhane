@@ -24,6 +24,9 @@ const createScreenOptions = ({ route }) => {
     tabBarIcon: ({ size, color }) => (
       <Ionicons name={iconName} size={size} color={color} />
     ),
+    activeTintColor: "tomato",
+    inactiveTintColor: "gray",
+    headerShown: false,
   };
 };
 
@@ -32,13 +35,7 @@ export const AppNavigator = () => {
     <FavouritesContextProvider>
       <LocationContextProvider>
         <RestaurantContextProvider>
-          <Tab.Navigator
-            screenOptions={createScreenOptions}
-            tabBarOptions={{
-              activeTintColor: "tomato",
-              inactiveTintColor: "gray",
-            }}
-          >
+          <Tab.Navigator screenOptions={createScreenOptions}>
             <Tab.Screen name="Restaurants" component={RestaurantsNavigator} />
             <Tab.Screen name="Map" component={MapScreen} />
             <Tab.Screen name="Settings" component={SettingsScreen} />
